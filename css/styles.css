@@ -259,13 +259,16 @@ textarea {
     gap: 20px;
 }
 
-.tarjeta-destacada {
-    padding: 28px;
-    border: 1px solid #dce5df;
-    border-radius: 14px;
-    background-color: white;
-    box-shadow: 0 8px 25px rgba(30, 60, 40, 0.08);
-    transition: 0.3s;
+.tarjeta-destacada > img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 18px;
+}
+
+.destacado-contenido {
+    padding: 0 2px;
 }
 
 .tarjeta-destacada:hover {
