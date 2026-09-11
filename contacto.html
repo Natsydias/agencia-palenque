@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Agencia Palenque</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="contenedor header-contenido">
+
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Logo Agencia Palenque">
+                <span>AGENCIA PALENQUE</span>
+            </a>
+
+            <nav class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="destinos.html">Destinos</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="contacto.html" class="activo">Contacto</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="banner-pagina">
+
+            <div class="contenedor">
+
+                <p class="etiqueta">PLANIFICA TU VISITA</p>
+
+                <h1>Contacto</h1>
+
+                <p>
+                    Cuéntanos qué experiencia quieres conocer
+                    en Palenque.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="seccion">
+
+            <div class="contenedor">
+
+                <div class="formulario-contenedor">
+
+                    <div class="formulario-intro">
+
+                        <p class="etiqueta">AGENDA TU EXPERIENCIA</p>
+
+                        <h2>Envíanos tu solicitud</h2>
+
+                        <p>
+                            Completa el formulario con tus datos y
+                            preferencias.
+                        </p>
+
+                    </div>
+
+
+                    <form class="formulario" action="#" method="post">
+
+
+                        <div class="form-grid">
+
+
+                            <!-- NOMBRE -->
+                            <div class="campo">
+
+                                <label for="nombre">
+                                    Nombre completo
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="nombre"
+                                    name="nombre"
+                                    placeholder="Escribe tu nombre"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <!-- EMAIL -->
+                            <div class="campo">
+
+                                <label for="email">
+                                    Correo electrónico
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="ejemplo@correo.com"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <!-- TELEFONO -->
+                            <div class="campo">
+
+                                <label for="telefono">
+                                    Teléfono
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="telefono"
+                                    name="telefono"
+                                    placeholder="0999999999"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <!-- FECHA -->
+                            <div class="campo">
+
+                                <label for="fecha">
+                                    Fecha de visita
+                                </label>
+
+                                <input
+                                    type="date"
+                                    id="fecha"
+                                    name="fecha"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <!-- DESTINO -->
+                            <div class="campo">
+
+                                <label for="destino">
+                                    Destino o actividad
+                                </label>
+
+                                <select
+                                    id="destino"
+                                    name="destino"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Selecciona una opción
+                                    </option>
+
+                                    <option value="reveza">
+                                        Balneario La Reveza
+                                    </option>
+
+                                    <option value="jauneche">
+                                        Reserva de Jauneche
+                                    </option>
+
+                                    <option value="garzas">
+                                        Humedal Las Garzas
+                                    </option>
+
+                                    <option value="iglesia">
+                                        Iglesia San Nicolás
+                                    </option>
+
+                                    <option value="casa-infante">
+                                        Casa de Nicolás Infante
+                                    </option>
+
+                                    <option value="tradiciones">
+                                        Tradiciones montubias
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- PERSONAS -->
+                            <div class="campo">
+
+                                <label for="personas">
+                                    Número de personas
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="personas"
+                                    name="personas"
+                                    min="1"
+                                    placeholder="Ejemplo: 4"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <!-- SERVICIO -->
+                            <div class="campo campo-completo">
+
+                                <label for="servicio">
+                                    Tipo de servicio
+                                </label>
+
+                                <select
+                                    id="servicio"
+                                    name="servicio"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Selecciona un servicio
+                                    </option>
+
+                                    <option value="naturaleza">
+                                        Tour de naturaleza
+                                    </option>
+
+                                    <option value="gastronomia">
+                                        Ruta gastronómica
+                                    </option>
+
+                                    <option value="cultural">
+                                        Tour cultural montubio
+                                    </option>
+
+                                    <option value="reveza">
+                                        Día en La Reveza
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- MENSAJE -->
+                            <div class="campo campo-completo">
+
+                                <label for="mensaje">
+                                    Mensaje
+                                </label>
+
+                                <textarea
+                                    id="mensaje"
+                                    name="mensaje"
+                                    rows="6"
+                                    placeholder="Escribe aquí tu mensaje..."
+                                    required
+                                ></textarea>
+
+                            </div>
+
+
+                            <!-- BOTON -->
+                            <div class="campo campo-completo">
+
+                                <button
+                                    type="submit"
+                                    class="btn"
+                                >
+                                    Enviar solicitud
+                                </button>
+
+                            </div>
+
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <div class="contenedor footer-contenido">
+
+            <div>
+                <h3>AGENCIA PALENQUE</h3>
+                <p>Descubre la esencia de Los Ríos.</p>
+            </div>
+
+            <div>
+                <p>
+                    Turismo rural · Paisajes · Tradiciones · Gastronomía
+                </p>
+            </div>
+
+        </div>
+
+        <div class="footer-final">
+            <p>
+                © 2026 Agencia Palenque | Proyecto académico
+            </p>
+        </div>
+
+    </footer>
+
+</body>
+</html>

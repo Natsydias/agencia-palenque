@@ -1,0 +1,817 @@
+/* ================================
+   CONFIGURACIÓN GENERAL
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #26382d;
+    background-color: #ffffff;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+
+/* ================================
+   CONTENEDOR
+================================ */
+
+.contenedor {
+    width: min(1120px, 92%);
+    margin: 0 auto;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #dce5df;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-contenido {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    color: #245b3c;
+}
+
+.logo img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.logo span {
+    font-size: 1rem;
+}
+
+
+/* MENU */
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.menu a {
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #385443;
+    transition: 0.3s;
+}
+
+.menu a:hover,
+.menu a.activo {
+    background-color: #e6f0e9;
+    color: #1d693f;
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+    min-height: 620px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: #244c35;
+}
+
+.hero > img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    inset: 0;
+    opacity: 0.72;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(20, 50, 32, 0.45);
+}
+
+.hero-contenido {
+    width: min(1120px, 92%);
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 720px;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1.05;
+    margin: 15px 0 20px;
+}
+
+.hero p:not(.etiqueta) {
+    font-size: 1.2rem;
+    max-width: 650px;
+    margin-bottom: 30px;
+}
+
+
+/* ================================
+   ETIQUETA
+================================ */
+
+.etiqueta {
+    font-size: 0.78rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #b8862f;
+}
+
+
+/* ================================
+   BOTONES
+================================ */
+
+.btn {
+    display: inline-block;
+    padding: 13px 22px;
+    border: 2px solid #1f7044;
+    border-radius: 8px;
+    background-color: #1f7044;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #174f31;
+    border-color: #174f31;
+    transform: translateY(-2px);
+}
+
+.btn:focus {
+    outline: 3px solid #e3bd67;
+    outline-offset: 3px;
+}
+
+.btn-secundario {
+    margin-top: 20px;
+}
+
+.btn-claro {
+    background-color: white;
+    border-color: white;
+    color: #1f7044;
+}
+
+.btn-claro:hover {
+    background-color: #f2f2f2;
+    color: #174f31;
+}
+
+
+/* ================================
+   SECCIONES
+================================ */
+
+.seccion {
+    padding: 80px 0;
+}
+
+.seccion-alterna {
+    background-color: #f3f7f4;
+}
+
+.titulo-seccion {
+    max-width: 720px;
+    margin-bottom: 45px;
+}
+
+.titulo-seccion h2,
+.dos-columnas h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15;
+    margin: 10px 0 18px;
+    color: #244c35;
+}
+
+.titulo-seccion p:last-child {
+    color: #5c6e63;
+}
+
+
+/* ================================
+   TARJETAS DESTACADAS
+================================ */
+
+.grid-destacados {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.tarjeta-destacada {
+    padding: 28px;
+    border: 1px solid #dce5df;
+    border-radius: 14px;
+    background-color: white;
+    box-shadow: 0 8px 25px rgba(30, 60, 40, 0.08);
+    transition: 0.3s;
+}
+
+.tarjeta-destacada:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(30, 60, 40, 0.14);
+}
+
+.icono {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.tarjeta-destacada h3 {
+    margin-bottom: 10px;
+    color: #245b3c;
+}
+
+
+/* ================================
+   CARDS
+================================ */
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    overflow: hidden;
+    background-color: white;
+    border: 1px solid #dce5df;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(30, 60, 40, 0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card > img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.card-contenido {
+    padding: 25px;
+}
+
+.card-contenido h3 {
+    color: #245b3c;
+    margin-bottom: 10px;
+}
+
+.card-contenido p {
+    color: #5c6e63;
+    margin-bottom: 15px;
+}
+
+.link {
+    color: #1f7044;
+    font-weight: bold;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+
+/* ================================
+   DOS COLUMNAS
+================================ */
+
+.dos-columnas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+
+/* ================================
+   GASTRONOMÍA
+================================ */
+
+.gastronomia-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.gastronomia-item {
+    display: flex;
+    gap: 18px;
+    padding: 25px;
+    background-color: #f3f7f4;
+    border: 1px solid #dce5df;
+    border-radius: 12px;
+}
+
+.gastronomia-item > span {
+    font-size: 2rem;
+}
+
+.gastronomia-item h3 {
+    color: #245b3c;
+    margin-bottom: 5px;
+}
+
+
+/* ================================
+   CTA
+================================ */
+
+.cta {
+    background-color: #245b3c;
+    color: white;
+    padding: 80px 0;
+}
+
+.cta-contenido {
+    text-align: center;
+    max-width: 700px;
+}
+
+.cta h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin: 12px 0;
+}
+
+.cta .etiqueta {
+    color: #e3bd67;
+}
+
+.cta p:not(.etiqueta) {
+    margin-bottom: 25px;
+}
+
+
+/* ================================
+   BANNER DE PÁGINAS
+================================ */
+
+.banner-pagina {
+    background-color: #245b3c;
+    color: white;
+    padding: 80px 0;
+}
+
+.banner-pagina h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin: 10px 0;
+}
+
+.banner-pagina p:last-child {
+    max-width: 700px;
+}
+
+
+/* ================================
+   DESTINOS
+================================ */
+
+.grid-destinos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.destino-card {
+    overflow: hidden;
+    background-color: white;
+    border: 1px solid #dce5df;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(30, 60, 40, 0.08);
+    transition: 0.3s;
+}
+
+.destino-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(30, 60, 40, 0.14);
+}
+
+.destino-card > img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.destino-contenido {
+    padding: 28px;
+}
+
+.destino-contenido h2 {
+    color: #245b3c;
+    margin: 8px 0 15px;
+}
+
+.destino-contenido p {
+    margin-bottom: 10px;
+    color: #596b60;
+}
+
+.categoria {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #e6f0e9;
+    border-radius: 20px;
+    color: #1f7044;
+    font-size: 0.72rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+/* ================================
+   SERVICIOS
+================================ */
+
+.grid-servicios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.servicio-card {
+    padding: 35px;
+    border: 1px solid #dce5df;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 8px 25px rgba(30, 60, 40, 0.08);
+}
+
+.servicio-numero {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #b8862f;
+}
+
+.servicio-card h2 {
+    color: #245b3c;
+    margin: 5px 0 15px;
+}
+
+.servicio-card p {
+    color: #596b60;
+    margin-bottom: 20px;
+}
+
+.precio {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1f7044;
+    margin-bottom: 25px;
+}
+
+.precio span {
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: #66756c;
+}
+
+
+/* ================================
+   NOSOTROS
+================================ */
+
+.caja-destacada {
+    padding: 35px;
+    background-color: #f3f7f4;
+    border-left: 5px solid #b8862f;
+    border-radius: 10px;
+}
+
+.caja-destacada h3 {
+    color: #245b3c;
+    margin-bottom: 10px;
+}
+
+.grid-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.info-box {
+    background-color: white;
+    padding: 35px;
+    border-radius: 14px;
+    border: 1px solid #dce5df;
+    box-shadow: 0 8px 25px rgba(30, 60, 40, 0.06);
+}
+
+.info-box h2 {
+    color: #245b3c;
+    margin-bottom: 12px;
+}
+
+.valores {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.valor {
+    text-align: center;
+    padding: 25px;
+    border: 1px solid #dce5df;
+    border-radius: 12px;
+}
+
+.valor > span {
+    font-size: 2rem;
+}
+
+.valor h3 {
+    color: #245b3c;
+    margin: 10px 0;
+}
+
+.lista-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.lista-info p {
+    padding: 18px;
+    background-color: #f3f7f4;
+    border-radius: 8px;
+}
+
+
+/* ================================
+   FORMULARIO
+================================ */
+
+.formulario-contenedor {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.formulario-intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.formulario-intro h2 {
+    color: #245b3c;
+    font-size: 2.5rem;
+    margin: 10px 0;
+}
+
+.formulario {
+    padding: 40px;
+    background-color: #f3f7f4;
+    border: 1px solid #dce5df;
+    border-radius: 15px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo-completo {
+    grid-column: 1 / -1;
+}
+
+.campo label {
+    font-weight: bold;
+    color: #294a36;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #bdcbc1;
+    border-radius: 8px;
+    background-color: white;
+    color: #26382d;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    outline: none;
+    border-color: #1f7044;
+    box-shadow: 0 0 0 3px rgba(31, 112, 68, 0.12);
+}
+
+.campo textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+.footer {
+    background-color: #173624;
+    color: white;
+}
+
+.footer-contenido {
+    padding: 45px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer h3 {
+    margin-bottom: 8px;
+}
+
+.footer p {
+    color: #d5e0d9;
+}
+
+.footer-final {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 18px;
+    text-align: center;
+}
+
+
+/* ================================
+   RESPONSIVE - TABLET
+================================ */
+
+@media (max-width: 900px) {
+
+    .header-contenido {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .grid-destacados {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .valores {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* ================================
+   RESPONSIVE - CELULAR
+================================ */
+
+@media (max-width: 768px) {
+
+    .seccion {
+        padding: 55px 0;
+    }
+
+    .hero {
+        min-height: 540px;
+    }
+
+    .hero h1 {
+        font-size: 2.7rem;
+    }
+
+    .grid-destacados,
+    .grid-cards,
+    .grid-destinos,
+    .grid-servicios,
+    .grid-info,
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dos-columnas {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .campo-completo {
+        grid-column: auto;
+    }
+
+    .footer-contenido {
+        flex-direction: column;
+    }
+
+}
+
+
+/* ================================
+   RESPONSIVE - CELULAR PEQUEÑO
+================================ */
+
+@media (max-width: 600px) {
+
+    .logo span {
+        font-size: 0.85rem;
+    }
+
+    .menu a {
+        padding: 8px 9px;
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        min-height: 500px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p:not(.etiqueta) {
+        font-size: 1rem;
+    }
+
+    .formulario {
+        padding: 22px;
+    }
+
+    .valores {
+        grid-template-columns: 1fr;
+    }
+
+}
